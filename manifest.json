@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GPT-Hack",
+  "version": "1.0.0",
+  "description": "Get Extra prompts. Runs only when button is pressed.",
+
+  "icons": {
+    "16": "./robot.png",
+    "48": "./robot.png",
+    "128": "./robot.png"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./robot.png",
+      "48": "./robot.png",
+      "128": "./robot.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": ["https://chatgpt.com/*"]
+}

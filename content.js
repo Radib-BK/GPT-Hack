@@ -16,6 +16,4 @@
 
   // aria accessibility
   btn.setAttribute("aria-disabled", "false");
-
-  alert("Button enabled");
 })();

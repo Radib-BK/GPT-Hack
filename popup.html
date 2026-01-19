@@ -11,10 +11,8 @@
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-          sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+        background: linear-gradient(135deg, #0d1f2d 0%, #051419 100%);
         padding: 20px;
         width: 280px;
         min-height: 180px;
@@ -22,7 +20,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 12px;
+        border-radius: 20px;
+        box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%);
+        border-radius: 24px;
+        z-index: -1;
+        filter: blur(4px);
       }
 
       .container {
@@ -31,11 +44,13 @@
       }
 
       .title {
-        color: #ffffff;
-        font-size: 24px;
+        color: #ffd700;
+        font-size: 28px;
         font-weight: 700;
         margin-bottom: 8px;
         letter-spacing: -0.5px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 8px rgba(255, 215, 0, 0.3);
+        transform: rotate(-2deg);
       }
 
       .subtitle {
@@ -47,26 +62,44 @@
 
       button {
         width: 100%;
-        padding: 14px 20px;
+        padding: 12px 16px;
         cursor: pointer;
         border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 15px;
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        color: white;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
-        letter-spacing: 0.3px;
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: 'Comic Sans MS', cursive;
+        background: linear-gradient(180deg, #ffb800 0%, #ff9500 50%, #ff8c00 100%);
+        color: #1a1a1a;
+        transition: all 0.2s ease;
+        box-shadow: 
+          0 8px 0 #cc7700,
+          0 12px 20px rgba(0, 0, 0, 0.3),
+          inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+          inset 2px 2px 4px rgba(255, 255, 255, 0.3);
+        letter-spacing: 0.5px;
+        position: relative;
+        top: 0;
       }
 
       button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+        background: linear-gradient(180deg, #ffc400 0%, #ffaa00 50%, #ff9900 100%);
+        box-shadow: 
+          0 6px 0 #cc7700,
+          0 10px 20px rgba(0, 0, 0, 0.3),
+          inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+          inset 2px 2px 4px rgba(255, 255, 255, 0.3);
+        top: 2px;
+        transform: scale(1.05);
       }
 
       button:active {
-        transform: translateY(0);
+        top: 8px;
+        box-shadow: 
+          0 0px 0 #cc7700,
+          0 4px 12px rgba(0, 0, 0, 0.3),
+          inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+          inset 2px 2px 4px rgba(255, 255, 255, 0.2);
       }
 
       .hint {
@@ -80,8 +113,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="title">✨ GPT-Hack</div>
-      <div class="subtitle">Enhance your experience</div>
+      <div class="title">GPT-Hack</div>
+      <div class="subtitle">Get An Extra Prompt</div>
       <button id="run">Run Script</button>
       <div class="hint">Activates on this tab only</div>
     </div>

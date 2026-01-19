@@ -3,7 +3,7 @@ document.getElementById("run").addEventListener("click", async () => {
 
   if (!tab?.id) return;
 
-  chrome.runtime.sendMessage({
+  await chrome.runtime.sendMessage({
     action: "RUN_SCRIPT",
     tabId: tab.id
   });
